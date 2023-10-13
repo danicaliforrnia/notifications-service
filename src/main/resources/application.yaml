@@ -1,3 +1,14 @@
 spring:
   application:
     name: notifications-service
+info:
+  app:
+    name: Notifications Service
+    description: API to send emails notifications
+server:
+  servlet:
+    contextPath: /api
+eureka:
+  instance:
+    statusPageUrlPath: ${server.servlet.contextPath}/actuator/info
+    healthCheckUrlPath: ${server.servlet.contextPath}/actuator/health
