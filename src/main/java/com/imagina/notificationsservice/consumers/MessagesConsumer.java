@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class MessagesConsumer {
 
-    @RabbitListener(queues = "q.send-emails")
+    @RabbitListener(queues = "q.send-email")
     public void handleEmailsMessages(Object message) {
-        log.info("(send-emails) Message: {}", message.toString());
+        log.info("(send-email) Message: {}", message.toString());
     }
 
     @RabbitListener(queues = "q.send-sms")
