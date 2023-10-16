@@ -6,6 +6,15 @@ spring:
     port: 5672
     username: guest
     password: guest
+  mail:
+    host: localhost
+    port: 25
+    protocol: smtp
+    properties:
+      smtp:
+        auth: true
+        starttls:
+          enable: true
 eureka:
   client:
     serviceUrl:
